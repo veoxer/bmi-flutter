@@ -13,3 +13,8 @@ const Color kBottomAppBarColor = Color(0xFFEB1555);
 const double kBottomAppBarHeight = 80.0;
 const Color kActiveAppCardColor = Color(0xFF1D1F33);
 const Color kInactiveAppCardColor = Color(0xFF111328);
+
+const kSliderThumbColor = Color(0xFFEB1555);
+const kSliderOverlayColor = Color(0x29EB1555);
+const kSliderInactiveTrackColor = Color(0xFF8D8E98);
+const kRoundButtonFillColor = Color(0xFF4C4F5E);
