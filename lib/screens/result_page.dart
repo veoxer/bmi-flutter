@@ -26,7 +26,7 @@ class ResultPage extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                'You Result',
+                'Your Result',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50.0),
               ),
             ),
