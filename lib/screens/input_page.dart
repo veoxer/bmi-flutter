@@ -3,10 +3,10 @@ import 'package:bmi/components/app_card.dart';
 import 'package:bmi/components/bottom_button.dart';
 import 'package:bmi/components/card_content.dart';
 import 'package:bmi/components/gender.dart';
+import 'package:bmi/components/round_icon_button.dart';
 import 'package:bmi/screens/result_page_arguments.dart';
 
 import '../constants.dart';
-import 'file:///D:/Programming/MobileWS/bmi/lib/components/round_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 

@@ -1,4 +1,4 @@
-import 'file:///D:/Programming/MobileWS/bmi/lib/components/app_card.dart';
+import 'package:bmi/components/app_card.dart';
 import 'package:bmi/components/bottom_button.dart';
 import 'package:bmi/screens/result_page_arguments.dart';
 import 'package:flutter/material.dart';

@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'components/gender.dart';
 
 class CalculatorBrain {

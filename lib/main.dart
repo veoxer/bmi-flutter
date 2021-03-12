@@ -1,5 +1,5 @@
-import 'file:///D:/Programming/MobileWS/bmi/lib/screens/result_page.dart';
 import 'package:bmi/screens/input_page.dart';
+import 'package:bmi/screens/result_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
