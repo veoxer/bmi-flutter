@@ -3,19 +3,26 @@ import '../constants.dart';
 
 class RoundIconButton extends StatelessWidget {
   final IconData iconData;
-  final Function change;
+  final Function onPointerDown;
+  final Function onPointerUp;
+  final Function normalPress;
 
-  RoundIconButton({@required this.iconData, @required this.change});
+  RoundIconButton(
+      {this.iconData, this.onPointerDown, this.onPointerUp, this.normalPress});
 
   @override
   Widget build(BuildContext context) {
-    return RawMaterialButton(
-      shape: CircleBorder(),
-      fillColor: kRoundButtonFillColor,
-      onPressed: change,
-      elevation: 0.0,
-      child: Icon(iconData),
-      constraints: BoxConstraints.tightFor(height: 56.0, width: 56.0),
+    return Listener(
+      child: RawMaterialButton(
+        shape: CircleBorder(),
+        fillColor: kRoundButtonFillColor,
+        elevation: 0.0,
+        child: Icon(iconData),
+        constraints: BoxConstraints.tightFor(height: 56.0, width: 56.0),
+        onPressed: normalPress,
+      ),
+      onPointerDown: onPointerDown,
+      onPointerUp: onPointerUp,
     );
   }
 }

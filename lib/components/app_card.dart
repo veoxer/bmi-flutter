@@ -10,9 +10,7 @@ class AppCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        updateCardGender();
-      },
+      onTap: updateCardGender,
       child: Container(
         child: cardChild,
         margin: EdgeInsets.all(10.0),

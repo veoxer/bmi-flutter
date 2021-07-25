@@ -20,6 +20,8 @@ class _InputPageState extends State<InputPage> {
   int height = 170;
   int weight = 50;
   int age = 20;
+  bool inputAgeIsPressed = false;
+  bool inputWeightIsPressed = false;
 
   @override
   Widget build(BuildContext context) {
@@ -140,22 +142,38 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             RoundIconButton(
                               iconData: FontAwesomeIcons.minus,
-                              change: () {
-                                setState(() {
-                                  weight--;
-                                });
+                              onPointerDown: (_) async {
+                                inputWeightIsPressed = true;
+                                do {
+                                  setState(() {
+                                    weight--;
+                                  });
+                                  await Future.delayed(
+                                      Duration(milliseconds: 200));
+                                } while (inputWeightIsPressed);
                               },
+                              onPointerUp: (_) => setState(
+                                () => inputWeightIsPressed = false,
+                              ),
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
                             RoundIconButton(
                               iconData: FontAwesomeIcons.plus,
-                              change: () {
-                                setState(() {
-                                  weight++;
-                                });
+                              onPointerDown: (_) async {
+                                inputWeightIsPressed = true;
+                                do {
+                                  setState(() {
+                                    weight++;
+                                  });
+                                  await Future.delayed(
+                                      Duration(milliseconds: 200));
+                                } while (inputWeightIsPressed);
                               },
+                              onPointerUp: (_) => setState(
+                                () => inputWeightIsPressed = false,
+                              ),
                             ),
                           ],
                         ),
@@ -165,6 +183,7 @@ class _InputPageState extends State<InputPage> {
                 ),
                 Expanded(
                   child: AppCard(
+                    updateCardGender: null,
                     colour: kActiveAppCardColor,
                     cardChild: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -182,22 +201,43 @@ class _InputPageState extends State<InputPage> {
                           children: [
                             RoundIconButton(
                               iconData: FontAwesomeIcons.minus,
-                              change: () {
+                              normalPress: () {
                                 setState(() {
                                   age--;
                                 });
                               },
+                              onPointerDown: (_) async {
+                                inputAgeIsPressed = true;
+                                do {
+                                  setState(() {
+                                    age--;
+                                  });
+                                  await Future.delayed(
+                                      Duration(milliseconds: 200));
+                                } while (inputAgeIsPressed);
+                              },
+                              onPointerUp: (_) => setState(
+                                () => inputAgeIsPressed = false,
+                              ),
                             ),
                             SizedBox(
                               width: 10.0,
                             ),
                             RoundIconButton(
                               iconData: FontAwesomeIcons.plus,
-                              change: () {
-                                setState(() {
-                                  age++;
-                                });
+                              onPointerDown: (_) async {
+                                inputAgeIsPressed = true;
+                                do {
+                                  setState(() {
+                                    age++;
+                                  });
+                                  await Future.delayed(
+                                      Duration(milliseconds: 200));
+                                } while (inputAgeIsPressed);
                               },
+                              onPointerUp: (_) => setState(
+                                () => inputAgeIsPressed = false,
+                              ),
                             ),
                           ],
                         ),
